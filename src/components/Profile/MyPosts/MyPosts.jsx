@@ -1,5 +1,6 @@
 import React from 'react';
-import './MyPosts.css'
+//import './MyPosts.css';
+import Post from './Post/Post'
 
 
 const MyPosts = () => {
@@ -9,6 +10,9 @@ const MyPosts = () => {
         <textarea>Contenr</textarea>
         <button>Add post</button>
         <button>Remove post</button>
+        <Post message="Work" likeCount="15" />
+        <Post message="Hobby"  likeCount="17" />
+        <Post message="Pets"/>
         </div>
     );
 }

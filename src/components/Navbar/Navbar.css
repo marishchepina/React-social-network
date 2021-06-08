@@ -1,8 +1,9 @@
 .app-nav {
-    grid-area: n;
-    padding: 10px;
-    background-color: #578686;
-    border-radius: 15px;}
+    grid-area:n;
+    background-color:#578686;
+    border-radius: 15px;
+    padding: 15px;
+    height: 75vh;}
 
     .app-item{
         font-size: 18px;
@@ -11,6 +12,7 @@
     .app-nav__link{       
         color: #ccc; 
         text-decoration: none;
+        display: block;
         }
 
     .app-nav__link:hover, .app-nav__link--active{color: #fff}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import  './Navbar.css';
 
 
@@ -9,11 +10,11 @@ const linkClassActive = "app-nav__link--active"
 const Navbar = () => {
     return( 
         <nav className = "app-nav">
-        <div><a href = "#" className={linkClass}>Profile </a></div>
-        <div><a href = "#" className={`${linkClass} ${linkClassActive}`}>Messages</a></div>
-        <div><a href = "#" className={linkClass}>News</a></div>
-        <div><a href = "#" className={linkClass}>Music</a></div>
-        <div><a href = "#" className={linkClass}>Settings</a></div>
+        <NavLink to = "/profile" className={linkClass} activeClassName={linkClassActive}>Profile </NavLink>
+        <NavLink to = "/dialogs" className={linkClass} activeClassName={linkClassActive}>Messages</NavLink>
+        <NavLink to = "/news" className={linkClass}  activeClassName={linkClassActive}>News</NavLink>
+        <NavLink to = "/music" className={linkClass}  activeClassName={linkClassActive}>Music</NavLink>
+        <NavLink to = "/settings" className={linkClass}  activeClassName={linkClassActive}>Settings</NavLink> 
     </nav>
     );
 }
