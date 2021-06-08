@@ -1,0 +1,16 @@
+.app-nav {
+    grid-area: n;
+    padding: 10px;
+    background-color: #578686;
+    border-radius: 15px;}
+
+    .app-item{
+        font-size: 18px;
+        line-height: 22px; }
+
+    .app-nav__link{       
+        color: #ccc; 
+        text-decoration: none;
+        }
+
+    .app-nav__link:hover, .app-nav__link--active{color: #fff}
