@@ -22,8 +22,8 @@ const  Message = (props) => {
     )
 };
 
-let interlocutorElements = props.interlocutors.map(i => <Interlocutor name={i.name} id={i.id} />);
-let messageElements = props.messages.map(m => <Message message={m.message} id={m.id} />);
+let interlocutorElements = props.state.interlocutors.map(i => <Interlocutor name={i.name} id={i.id} />);
+let messageElements = props.state.messages.map(m => <Message message={m.message} id={m.id} />);
     return( 
     <div className="dialogs-wrap">
         <div className="interlocutor-wrap">
