@@ -3,16 +3,17 @@ import React from 'react';
 import Post from './Post/Post'
 
 
-const MyPosts = () => {
+const MyPosts = (props) => {
+
+    let myPostSElements= props.posts.map(p=> <Post key={p.id} message={p.message} likesCount={p.likesCount} />);
+
     return( 
         <div >
             <hr/>
         <textarea>Contenr</textarea>
         <button>Add post</button>
         <button>Remove post</button>
-        <Post message="Work" likeCount="15" />
-        <Post message="Hobby"  likeCount="17" />
-        <Post message="Pets"/>
+        {myPostSElements}
         </div>
     );
 }

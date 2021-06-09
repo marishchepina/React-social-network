@@ -1,0 +1,11 @@
+.profile{display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+}
+.profile__img {
+    float: left;
+    width: 75%;
+    margin-right: 15px;
+    height: auto;
+    border: 2px solid #578686;
+    border-radius: 15px;}

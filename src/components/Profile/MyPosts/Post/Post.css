@@ -1,0 +1,8 @@
+hr{
+    width: 100%;
+    margin: 40px 0 20px 0;
+    border: 1px solid teal;
+}
+
+.post{position: relative;}
+.post__likes{position: absolute; right: 15px; top: 15px;}

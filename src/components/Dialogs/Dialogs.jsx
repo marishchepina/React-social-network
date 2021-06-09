@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Dialogs.css'
 
+const Dialogs = (props) => {
 
 const  Interlocutor= (props) => {
     let path =`/dialogs/${props.id}`
@@ -21,20 +22,15 @@ const  Message = (props) => {
     )
 };
 
-const Dialogs = () => {
+let interlocutorElements = props.interlocutors.map(i => <Interlocutor name={i.name} id={i.id} />);
+let messageElements = props.messages.map(m => <Message message={m.message} id={m.id} />);
     return( 
     <div className="dialogs-wrap">
         <div className="interlocutor-wrap">
-            <Interlocutor name="Dima" id="1" />
-            <Interlocutor name="Lera" id="2" />
-            <Interlocutor name="Anya" id="3" />
-            <Interlocutor name="Max" id="4" />
-            <Interlocutor name="Yarik" id="5" />
+            {interlocutorElements }
         </div> 
         <div className="messages-wrap">
-            <Message message="Hi"/>
-            <Message message="Hello"/>
-            <Message message="How are you?"/>
+            {messageElements}
         </div>
     </div>
     );

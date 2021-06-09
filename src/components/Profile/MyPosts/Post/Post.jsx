@@ -1,13 +1,14 @@
 import React from 'react';
-//import './Post.css'
-
+import './Post.css'
 
 const Post = (props) => {
     return( 
-        <div>
+    <div className="post">
+        <hr/>
         {props.message} 
-        <div>{props.likeCount} </div>
-        </div>
+        <span className="post__likes">{props.likesCount}</span>
+    </div>
+       
     );
 }
 
