@@ -2,7 +2,7 @@ import React from 'react';
 import './Post.css'
 
 const Post = (props) => {
-  debugger;
+    
     return( 
     <div className="post">
         <hr/>

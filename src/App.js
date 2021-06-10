@@ -13,19 +13,19 @@ import Settings from './components/Settings/Settings';
 const App = (props) => {
 
     return ( 
-        <BrowserRouter>
+        // <BrowserRouter>
         <div className = "app-wrapper" >
             <Header />
             <Navbar />
             <div className="app-content">
-                <Route path="/profile" render={()=><Profile state={props.state.profilePage} />} />
+                <Route path="/profile" render={()=><Profile state={props.state.profilePage} addPost={props.addPost}/>} />
                 <Route path="/dialogs" render={()=><Dialogs state={props.state.dialogsPage} />} />
                 <Route path="/news" component={News} />
                 <Route path="/music" component={Music} />
                 <Route path="/settings" component={Settings} />
             </div>
         </div>
-        </BrowserRouter>
+        // </BrowserRouter>
     )
 }
 
