@@ -30,3 +30,18 @@ color:#fff;
   border-radius: 15px;
 
 }
+
+.btn { 
+  border: none; 
+  margin: 10px;
+  color: #ccc; 
+  background: #578686; 
+  display: block; 
+  padding:  10px; 
+  width: 120px; 
+  border-radius: 5px;}
+
+  .btn:hover{
+    cursor: pointer;
+    color: #fff;
+  }
