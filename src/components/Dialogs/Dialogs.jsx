@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import {addMessageActionCreator, updateNewMessageTextActionCreator} from '../../redux/state.js'
+import {addMessageActionCreator, updateNewMessageTextActionCreator} from '../../redux/dialogs-reducer'
 import './Dialogs.css'
 
 const Dialogs = (props) => {
-debugger;
+
     let newMessageElement = React.createRef();
     const  Interlocutor= (props) => {
         let path =`/dialogs/${props.id}`
