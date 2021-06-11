@@ -1,8 +1,22 @@
+import registerServiceWorker from './registerServiceWorker';
+import store from "./redux/state";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {BrowserRouter} from 'react-router-dom';
+import './index.css';
+import App from './App';
 
-//import registerServiceWorker from './registerServiceWorker';
-import {rerenderEntireTree} from './render';
-import state from "./redux/state";
+let rerenderEntireTree = (state) =>{
+    ReactDOM.render(
+        <BrowserRouter>
+            <App 
+                state={store._state} 
+                addPost={store.addPost.bind(store)} 
+                updateNewPostText={store.updateNewPostText.bind(store)}/>
+        </BrowserRouter>, 
+        document.getElementById('root'));
+    registerServiceWorker();    
+}
 
-
-
-rerenderEntireTree(state);
+rerenderEntireTree(store.getState());
+store.subscribe(rerenderEntireTree);
