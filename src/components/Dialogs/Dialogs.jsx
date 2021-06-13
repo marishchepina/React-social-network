@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './Dialogs.css'
 
 const Dialogs = (props) => {
- 
+
     let newMessageElement = React.createRef();
     const  Interlocutor= (props) => {
         let path =`/dialogs/${props.id}`
@@ -23,10 +23,10 @@ const Dialogs = (props) => {
         )
     };
 
-    let interlocutorElements = props.interlocutors.map(i => 
+    let interlocutorElements = props.dialogsPage.interlocutors.map(i => 
         <Interlocutor name={i.name} id={i.id} />
     );
-    let messageElements = props.messages.map(m => 
+    let messageElements = props.dialogsPage.messages.map(m => 
         <Message message={m.message} id={m.id} />
     );
 

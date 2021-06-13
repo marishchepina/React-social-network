@@ -5,13 +5,14 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
 import './index.css';
 import App from './App';
+import  {Provider} from './StoreContext.js'
 
-let rerenderEntireTree = (state) =>{
+let rerenderEntireTree = () => {
     ReactDOM.render(
         <BrowserRouter>
-            <App 
-                store={store} 
-                dispatch={store.dispatch.bind(store)} />
+        <Provider store = {store}>
+            <App />
+        </Provider>
         </BrowserRouter>, 
         document.getElementById('root'));
     registerServiceWorker();    

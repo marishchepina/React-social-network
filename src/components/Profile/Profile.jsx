@@ -4,18 +4,12 @@ import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 
 
-const Profile = (props) => {
+const Profile = () => {
 
     return( 
         <div className = "app-content" >
             <ProfileInfo />
-            <MyPostsContainer
-                store = {props.store}
-                dispatch = {props.dispatch} 
-                //posts={props.profilePage.posts} 
-                //newPostText={props.profilePage.newPostText}
-                //dispatch = {props.dispatch}
-                />
+            <MyPostsContainer/>
         </div>
     );
 }
