@@ -1,10 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import {addMessageActionCreator, updateNewMessageTextActionCreator} from '../../redux/dialogs-reducer'
 import './Dialogs.css'
 
 const Dialogs = (props) => {
-
+ 
     let newMessageElement = React.createRef();
     const  Interlocutor= (props) => {
         let path =`/dialogs/${props.id}`
@@ -24,23 +23,20 @@ const Dialogs = (props) => {
         )
     };
 
-    let interlocutorElements = props.dialogsPage.interlocutors.map(i => 
+    let interlocutorElements = props.interlocutors.map(i => 
         <Interlocutor name={i.name} id={i.id} />
     );
-    let messageElements = props.dialogsPage.messages.map(m => 
+    let messageElements = props.messages.map(m => 
         <Message message={m.message} id={m.id} />
     );
 
-
-
     let addMessage = () => {
-        let text = newMessageElement.current.value;
-        props.dispatch(addMessageActionCreator(text));
+        props.addMessage();
     };
 
     let onMessageChange = () => {
-        let text= newMessageElement.current.value;
-        props.dispatch(updateNewMessageTextActionCreator(text));
+        let newMessageText = newMessageElement.current.value;
+        props.updateNewMessageText(newMessageText);
     }
 
 
