@@ -18,7 +18,8 @@ const MyPosts = (props) => {
     return( 
         <div>
             <hr/>
-            <textarea ref={newPostElement} 
+            <textarea 
+                ref={newPostElement} 
                 onChange={onPostChange} 
                 value={props.newPostText} />
             <button onClick={onAddPost}>Add post</button>
