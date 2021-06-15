@@ -4,9 +4,9 @@ const SET_USERS = 'SET_USERS';
 
 const initialState = { 
     users: [
-    {id: 1, photoUrl: 'https://st2.depositphotos.com/3687485/10944/v/950/depositphotos_109443302-stock-illustration-happy-woman-face-vector-illustration.jpg', followed: false, fullName:'Dima', status:'Grear guy.', location: {city: 'Minsk', country: 'Belarus'}},
-    {id: 2, photoUrl: 'https://st2.depositphotos.com/3687485/10944/v/950/depositphotos_109443302-stock-illustration-happy-woman-face-vector-illustration.jpg', followed: true, fullName:'Lera', status:'So pretty!', location: {city: 'London', country: 'England'}},
-    {id: 3, photoUrl: 'https://st2.depositphotos.com/3687485/10944/v/950/depositphotos_109443302-stock-illustration-happy-woman-face-vector-illustration.jpg', followed: false, fullName:'Ivan', status:'Codding, as always.', location: {city: 'Kyiv', country: 'Ukraine'}}
+    // {id: 1, photoUrl: 'https://st2.depositphotos.com/3687485/10944/v/950/depositphotos_109443302-stock-illustration-happy-woman-face-vector-illustration.jpg', followed: false, fullName:'Dima', status:'Grear guy.', location: {city: 'Minsk', country: 'Belarus'}},
+    // {id: 2, photoUrl: 'https://st2.depositphotos.com/3687485/10944/v/950/depositphotos_109443302-stock-illustration-happy-woman-face-vector-illustration.jpg', followed: true, fullName:'Lera', status:'So pretty!', location: {city: 'London', country: 'England'}},
+    // {id: 3, photoUrl: 'https://st2.depositphotos.com/3687485/10944/v/950/depositphotos_109443302-stock-illustration-happy-woman-face-vector-illustration.jpg', followed: false, fullName:'Ivan', status:'Codding, as always.', location: {city: 'Kyiv', country: 'Ukraine'}}
 ],
 newPostText: ''
 };

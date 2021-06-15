@@ -12,6 +12,7 @@ const Navbar = () => {
         <nav className = "app-nav">
         <NavLink to = "/profile" className={linkClass} activeClassName={linkClassActive}>Profile </NavLink>
         <NavLink to = "/dialogs" className={linkClass} activeClassName={linkClassActive}>Messages</NavLink>
+        <NavLink to = "/users" className={linkClass}  activeClassName={linkClassActive}>Users</NavLink>
         <NavLink to = "/news" className={linkClass}  activeClassName={linkClassActive}>News</NavLink>
         <NavLink to = "/music" className={linkClass}  activeClassName={linkClassActive}>Music</NavLink>
         <NavLink to = "/settings" className={linkClass}  activeClassName={linkClassActive}>Settings</NavLink> 
