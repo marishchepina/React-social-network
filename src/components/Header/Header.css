@@ -1,13 +1,11 @@
 .app-header{
-    grid-area:h;
-    background-color: #578686;
-    border-radius: 0 0 15px 15px;
-    width: 100%;
-    }
+  grid-area:h;
+  background-color: #578686;
+  border-radius: 0 0 15px 15px;
+  width: 100%;}
     
-    .app-header img{
-      margin: 9px 15px 9px;
-      width: 122px;
-      height: auto;
-      border-radius: 15px;
-      }
+.app-header img{
+  margin: 9px 15px 9px;
+  width: 122px;
+  height: auto;
+  border-radius: 15px;}

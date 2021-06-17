@@ -1,7 +1,8 @@
-.profile{display: flex; 
+.profile {
+    display: flex; 
     justify-content: flex-start;
-    align-items: center;
-}
+    align-items: center;}
+
 .profile__img {
     float: left;
     width: 75%;

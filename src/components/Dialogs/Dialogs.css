@@ -2,13 +2,12 @@
   display: grid;
   grid-template-columns: 2fr 10fr;}
 
-  .interlocutor a{
-    display: block;
-    text-decoration: none;
-    padding: 5px 0 0 5px0; 
-    color:  rgb(163, 150, 28)    }
+.interlocutor a {
+  display: block;
+  text-decoration: none;
+  padding: 5px 0 0 5px0; 
+  color:  rgb(163, 150, 28)    }
 
-
-    .interlocutor--active a{
-      color: rgb(14, 122, 122)}
+.interlocutor--active a{
+  color: rgb(14, 122, 122)}
     

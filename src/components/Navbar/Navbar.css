@@ -5,14 +5,13 @@
     padding: 15px;
     height: 75vh;}
 
-    .app-item{
-        font-size: 18px;
-        line-height: 22px; }
+.app-item{
+    font-size: 18px;
+    line-height: 22px; }
 
-    .app-nav__link{       
-        color: #ccc; 
-        text-decoration: none;
-        display: block;
-        }
+.app-nav__link{       
+    color: #ccc; 
+    text-decoration: none;
+    display: block;}
 
-    .app-nav__link:hover, .app-nav__link--active{color: #fff}
+.app-nav__link:hover, .app-nav__link--active{color: #fff}

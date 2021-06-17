@@ -1,12 +1,13 @@
-img{
-  width: 100%; height: auto;
+img {
+  width: 100%;
+  height: auto;
 }
 
-.app-wrapper{
+.app-wrapper {
   display: grid;
-  grid-template-areas: 
-  "h h"
-  "n c";
+  grid-template-areas:
+    "h h"
+    "n c";
   grid-template-rows: 15.5vh 1fr;
   grid-template-columns: 3fr 10fr;
   grid-gap: 10px;
@@ -14,34 +15,32 @@ img{
   width: 1050px;
 }
 
-.app-nav__link{
-text-decoration: none;
-color:#fff;
+.app-nav__link {
+  text-decoration: none;
+  color: #fff;
 }
 
-.app-content{
-  grid-area:c;
+.app-content {
+  grid-area: c;
 }
 
-.app-content__ava{
+.app-content__ava {
   width: 350px;
   height: auto;
   border: 2px solid #578686;
   border-radius: 15px;
-
 }
 
-.btn { 
-  border: none; 
+.btn {
+  border: none;
   margin: 10px;
-  color: #ccc; 
-  background: #578686; 
-  display: block; 
-  padding:  10px; 
-  width: 120px; 
+  color: #ccc;
+  background: #578686;
+  display: block;
+  padding: 10px;
+  width: 120px;
   border-radius: 5px;}
 
-  .btn:hover{
-    cursor: pointer;
-    color: #fff;
-  }
+.btn:hover {
+  cursor: pointer;
+  color: #fff;}

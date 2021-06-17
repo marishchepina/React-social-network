@@ -1,14 +1,8 @@
-import React from 'react';
+import React from 'react'
 import './Music.css'
 
-
 const Music = () => {
-    return( 
-    <div>
-        Music
-    </div> 
-    );
+  return <div>Music</div>
 }
 
-
-export default Music;
+export default Music
