@@ -1,0 +1,2 @@
+.paginator>span{margin: 10px; cursor: pointer;}
+.paginator__page--selected {font-weight: bold;}
