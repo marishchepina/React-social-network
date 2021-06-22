@@ -1,29 +1,33 @@
-import * as axios from 'axios'
 import React from 'react'
 import userPhoto from '../../assets/images/user.png'
 
 let Users = (props) => {
-  let getUsers = () => {
-    if (props.users.length === 0) {
-      axios
-        .get('https://social-network.samuraijs.com/api/1.0/users')
-        .then((response) => {
-          props.setUsers(response.data.items)
-        })
-    }
+  console.log(props)
+  let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
+  console.log(pagesCount)
+  let pages = []
+  for (let i = 1; i <= pagesCount; i++) {
+    pages.push(i)
   }
-
+  let paginator = pages.map((p) => {
+    return (
+      <span
+        className={props.currentPage === p && `paginator__page--selected`}
+        onClick={(e) => {
+          props.onPageChanged(p)
+        }}
+      >
+        {p}
+      </span>
+    )
+  })
   return (
     <div>
-      <button onClick={getUsers}>Get Users</button>
+      <div className="paginator">{paginator}</div>
       {props.users.map((u) => (
         <div key={u.id}>
           <div>
-            <img
-              style={{ width: 90 + 'px' }}
-              src={u.photos.small !== null ? u.photos.small : userPhoto}
-              alt=""
-            />
+            <img style={{ width: 90 + 'px' }} src={userPhoto} alt="" />
             {u.followed ? (
               <button
                 onClick={() => {
