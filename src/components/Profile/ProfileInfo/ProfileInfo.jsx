@@ -1,7 +1,11 @@
 import React from 'react'
+import Preloader from '../../Preloader/Preloader'
 import './ProfileInfo.css'
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
+  if (!props.profile) {
+    return <Preloader />
+  }
   return (
     <div className="profile">
       <img
@@ -10,7 +14,7 @@ const ProfileInfo = () => {
         alt=""
       />
       <div>
-        <div>Tolik Sheptman</div>
+        <div>{props.profile ? props.profile.fullName : `Tolik Sheptman`} </div>
         <span>Student</span>
         <div>Age: 22</div>
       </div>
