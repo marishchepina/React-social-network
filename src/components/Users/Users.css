@@ -1,3 +1,4 @@
 .paginator {width: 100%; overflow: hidden; height: 40px} 
 .paginator span{display: inline-block;font-size: 12px; line-height: 20px; margin: 10px; cursor: pointer; height: 20px; width: 20px; text-align: center; border-radius: 50%; background: #ccc;}
 .paginator .paginator__page--selected {font-weight: bold; background: cadetblue; color: #fff}
+button {cursor: pointer;}

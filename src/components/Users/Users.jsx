@@ -1,12 +1,12 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import userPhoto from '../../assets/images/user.png'
+import axios from 'axios'
 import './Users.css'
 
 let Users = (props) => {
   console.log(props)
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
-  console.log(pagesCount)
   let pages = []
   for (let i = 1; i <= pagesCount; i++) {
     pages.push(i)
@@ -35,6 +35,16 @@ let Users = (props) => {
             {u.followed ? (
               <button
                 onClick={() => {
+                  axios
+                    .delete(
+                      `https://social-network.samuraijs.com/api/1.0/follow/${u.id}`,
+                      { withCredentials: true }
+                    )
+                    .then((response) => {
+                      if (response.data.resultCode == 0) {
+                        props.follow(u.id)
+                      }
+                    })
                   props.unfollow(u.id)
                 }}
               >
@@ -43,6 +53,17 @@ let Users = (props) => {
             ) : (
               <button
                 onClick={() => {
+                  axios
+                    .post(
+                      `https://social-network.samuraijs.com/api/1.0/follow/${u.id}`,
+                      {},
+                      { withCredentials: true }
+                    )
+                    .then((response) => {
+                      if (response.data.resultCode == 0) {
+                        props.follow(u.id)
+                      }
+                    })
                   props.follow(u.id)
                 }}
               >
