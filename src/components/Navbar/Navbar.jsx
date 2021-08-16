@@ -29,7 +29,7 @@ const Navbar = () => {
       >
         Users
       </NavLink>
-      <NavLink
+      {/* <NavLink
         to="/news"
         className={linkClass}
         activeClassName={linkClassActive}
@@ -49,7 +49,7 @@ const Navbar = () => {
         activeClassName={linkClassActive}
       >
         Settings
-      </NavLink>
+      </NavLink> */}
     </nav>
   )
 }

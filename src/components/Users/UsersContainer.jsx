@@ -12,6 +12,8 @@ import {
 import Users from './Users'
 import Preloader from '../Preloader/Preloader'
 import { usersAPI } from '../../api/api'
+import withAuthRedirect from '../hoc/withAuthRedirect'
+import { compose } from 'redux'
 
 class UsersContainer extends React.Component {
   componentDidMount() {
@@ -57,15 +59,17 @@ let mapStateToProps = (state) => {
   }
 }
 
-//connect gets object and dispatch AC is happening automatically
-export default connect(mapStateToProps, {
-  follow,
-  unfollow,
-  setUsers,
-  setCurrentPage,
-  setTotalUsersCount,
-  toggleIsFetching,
-  getUsers: getUsersThunkCreator,
-})(UsersContainer)
+export default compose(
+  withAuthRedirect,
+  connect(mapStateToProps, {
+    follow,
+    unfollow,
+    setUsers,
+    setCurrentPage,
+    setTotalUsersCount,
+    toggleIsFetching,
+    getUsers: getUsersThunkCreator,
+  })
+)(UsersContainer)
 
 //toggleFollowingProgress -AC we changed it by thunks (getUsers: getUsersThunkCreator), connect create callback from it. Callback will dispatch AC incide.
