@@ -1,4 +1,5 @@
 import axios from 'axios' //DAL (Data access layer)
+//https://social-network.samuraijs.com/docs#auth
 
 const instance = axios.create({
   withCredentials: true,
@@ -12,19 +13,24 @@ export const usersAPI = {
       .get(`users?page=${currentPage}&count=${pageSize}`, {
         withCredentials: true,
       })
-      .then((response) => {
-        console.log(response.data)
-        return response.data
-      })
+      .then(({ data }) => data)
   },
 
   getProfile(userId = 18953) {
-    return instance.get(`profile/${userId}`).then((response) => {
-      return response.data
-    })
+    return instance.get(`profile/${userId}`).then(({ data }) => data)
   },
 
   follow(id) {
     return instance.post(`follow/${id}`, {})
+  },
+
+  unfollow(id) {
+    return instance.delete(`unfollow/${id}`)
+  },
+}
+
+export const authAPI = {
+  me() {
+    return instance.get(`auth/me`)
   },
 }

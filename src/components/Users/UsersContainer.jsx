@@ -7,7 +7,7 @@ import {
   setCurrentPage,
   setTotalUsersCount,
   toggleIsFetching,
-  toggleFollowingProgress,
+  getUsersThunkCreator,
 } from '../../redux/users-reducer'
 import Users from './Users'
 import Preloader from '../Preloader/Preloader'
@@ -15,15 +15,7 @@ import { usersAPI } from '../../api/api'
 
 class UsersContainer extends React.Component {
   componentDidMount() {
-    this.props.toggleIsFetching(true)
-
-    usersAPI
-      .getUsers(this.props.currentPage, this.props.pageSize)
-      .then((data) => {
-        this.props.toggleIsFetching(false)
-        this.props.setUsers(data.items)
-        this.props.setTotalUsersCount(data.totalCount)
-      })
+    this.props.getUsers(this.props.currentPage, this.props.pageSize)
   }
 
   onPageChanged = (pageNumber) => {
@@ -49,7 +41,6 @@ class UsersContainer extends React.Component {
           follow={this.props.follow}
           unfollow={this.props.unfollow}
           followingInProgress={this.props.followingInProgress}
-          toggleFollowingProgress={this.props.toggleFollowingProgress}
         />
       </div>
     )
@@ -62,12 +53,11 @@ let mapStateToProps = (state) => {
     totalUsersCount: state.usersPage.totalUsersCount,
     currentPage: state.usersPage.currentPage,
     isFetching: state.usersPage.isFetching,
-    toggleFollowingProgress: state.usersPage.toggleFollowingProgress,
     followingInProgress: state.usersPage.followingInProgress,
   }
 }
 
-//connect gets object and dispatch AC is happening automaticaly
+//connect gets object and dispatch AC is happening automatically
 export default connect(mapStateToProps, {
   follow,
   unfollow,
@@ -75,7 +65,7 @@ export default connect(mapStateToProps, {
   setCurrentPage,
   setTotalUsersCount,
   toggleIsFetching,
-  toggleFollowingProgress,
+  getUsers: getUsersThunkCreator,
 })(UsersContainer)
 
-//toggleFollowingProgress -AC, connect create callback from it. Callback will dispatch AC incide.
+//toggleFollowingProgress -AC we changed it by thunks (getUsers: getUsersThunkCreator), connect create callback from it. Callback will dispatch AC incide.
