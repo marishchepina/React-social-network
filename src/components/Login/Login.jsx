@@ -25,14 +25,12 @@ const LoginReduxForm = reduxForm({ form: 'login' })(LoginForm) //'login' unic na
 //store.getState().form
 
 const Login = (props) => {
-  const onSubmit = (formData) => {
-    console.log(formData)
-  }
+  const onSubmit = (formData) => {}
 
   return (
     <div>
       <h1>Login</h1>
-      <LoginReduxForm onSubmit={onSubmitx} />
+      <LoginReduxForm onSubmit={onSubmit} />
     </div>
   )
 }
