@@ -29,27 +29,6 @@ const Navbar = () => {
       >
         Users
       </NavLink>
-      {/* <NavLink
-        to="/news"
-        className={linkClass}
-        activeClassName={linkClassActive}
-      >
-        News
-      </NavLink>
-      <NavLink
-        to="/music"
-        className={linkClass}
-        activeClassName={linkClassActive}
-      >
-        Music
-      </NavLink>
-      <NavLink
-        to="/settings"
-        className={linkClass}
-        activeClassName={linkClassActive}
-      >
-        Settings
-      </NavLink> */}
     </nav>
   )
 }
