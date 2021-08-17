@@ -10,3 +10,14 @@
     height: auto;
     border: 2px solid #578686;
     border-radius: 15px;}
+
+.profile__status{ 
+    font-size: 0.9rem;
+    font-style: italic;
+    color: rgb(163, 150, 28);;
+    border: 1px solid rgb(163, 150, 28);
+    height: 25px;
+    min-width: 150px;
+    width: 150px;
+    outline: none;
+    display: block;}
