@@ -1,8 +1,10 @@
 import React from 'react'
 import Preloader from '../../Preloader/Preloader'
+import ProfileStatus from './ProfileStatus'
 import './ProfileInfo.css'
 
 const ProfileInfo = (props) => {
+  console.log(props)
   if (!props.profile) {
     return <Preloader />
   }
@@ -14,9 +16,13 @@ const ProfileInfo = (props) => {
         alt=""
       />
       <div>
-        <div>{props.profile ? props.profile.fullName : `Tolik Sheptman`} </div>
+        <div>{props.profile ? props.profile.fullName : ``} </div>
         <span>Student</span>
         <div>Age: 22</div>
+        <ProfileStatus
+          status={props.status}
+          updateStatus={props.updateStatus}
+        />
       </div>
     </div>
   )
