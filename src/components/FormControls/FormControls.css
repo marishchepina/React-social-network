@@ -1,0 +1,4 @@
+.error {position: relative;}
+.error input, .error textarea{ border: 2px solid rgba(163, 33, 33, 0.842)}
+.error__message {display: none;}
+.error .error__message {display: block; background-color:  rgba(163, 33, 33, 0.842); color: #fff; padding: 2px; position: absolute; left: 0; top:-23px;}

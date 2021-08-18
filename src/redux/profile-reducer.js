@@ -10,7 +10,7 @@ const initialState = {
     { id: 2, message: 'Hobby', likesCount: 7 },
     { id: 3, message: 'Pets', likesCount: 100 },
   ],
-  newPostText: '',
+  newPostText: 'ccc',
   profile: null,
   status: '',
 }

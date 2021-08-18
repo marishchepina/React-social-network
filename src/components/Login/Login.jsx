@@ -1,17 +1,34 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
+import { required, maxLengthCreator } from '../../utils/validators/validators'
+import { Input } from '../FormControls/FormControls'
 
 const LoginForm = (props) => {
   return (
     <div>
       <form onSubmit={props.handleSubmit}>
-        <Field placeholder={'Login'} component={'input'} name={'login'} />
+        <Field
+          placeholder={'Login'}
+          component={Input}
+          name={'login'}
+          validate={required}
+        />
         <br />
         <br />
-        <Field placeholder={'Password'} component={'input'} name={'password'} />
+        <Field
+          placeholder={'Password'}
+          validate={required}
+          component={Input}
+          name={'password'}
+        />
         <br />
         <br />
-        <Field type={'checkbox'} component={'input'} name={'rememberMe'} />
+        <Field
+          type={'checkbox'}
+          component={Input}
+          name={'rememberMe'}
+          validate={required}
+        />
         <label>Remember me</label>
         <br />
         <br />
@@ -21,7 +38,7 @@ const LoginForm = (props) => {
   )
 }
 
-const LoginReduxForm = reduxForm({ form: 'login' })(LoginForm) //'login' unic name for my form
+const LoginReduxForm = reduxForm({ form: 'posts' })(LoginForm) //'login' unic name for my form
 //store.getState().form
 
 const Login = (props) => {
